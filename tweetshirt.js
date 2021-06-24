@@ -34,6 +34,18 @@ function drawSquare(canvas, context) {
     context.fillRect(x, y, w, w);
 }
 
+function drawCircle(canvas, context) {
+    var radius = Math.floor(Math.random() * 40);
+    var x = Math.floor(Math.random() * canvas.width);
+    var y = Math.floor(Math.random() * canvas.height);
+
+    context.beginPath();
+    context.arc(x, y, radius, 0, degreeToRadians(360), true);
+
+    context.fillStyle = "lightblue";
+    context.fill();
+}
+
 function fillBackgroundColor(canvas, context) {
     var selectObj = document.getElementById("backgroundColor");
 

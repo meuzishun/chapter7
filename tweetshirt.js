@@ -16,6 +16,10 @@ function previewHandler() {
         for (var squares = 0; squares < 20; squares++) {
             drawSquare(canvas, context);
         }
+    } else if (shape == "circles") {
+        for (var circles = 0; circles < 20; circles++) {
+            drawCircles(canvas, context);
+        }
     }
 }
 

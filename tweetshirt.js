@@ -40,7 +40,7 @@ function drawCircle(canvas, context) {
     var y = Math.floor(Math.random() * canvas.height);
 
     context.beginPath();
-    context.arc(x, y, radius, 0, degreeToRadians(360), true);
+    context.arc(x, y, radius, 0, degreesToRadians(360), true);
 
     context.fillStyle = "lightblue";
     context.fill();
@@ -56,4 +56,8 @@ function fillBackgroundColor(canvas, context) {
     context.fillStyle = bgColor;
 
     context.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+function degreesToRadians(degrees) {
+    return (degrees * Math.PI) / 180;
 }
